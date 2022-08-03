@@ -17,10 +17,10 @@ body{
 }
 
 header{
-    height: 150px;
+    height: 130px;
     background-color: #c1c2d8;
     color: #5f60c5;
-    font-size: 65px;
+    font-size: 60px;
     font-family: 'Roboto Mono', monospace;
     word-spacing: -20px;
     letter-spacing: -5px;
@@ -36,34 +36,47 @@ header{
 }
 
 .game{
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    display: none;
 }
 
 .playerStats{
     font-size: 1.75em;
     color: #5f60c5;
-    margin-top: 150px;
+    margin: 150px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 50px;
+    border-radius: 7px;
     /* background-color: red; */
+}
+
+.currentCard{
+    background-color: #c1c2d8;
 }
 
 .playerLabel{
     padding: 1.5px 1px;
     border-top: 5px solid #9596d9;
     border-bottom: 5px solid #9596d9;
-    border-radius: 5px;
+    border-radius: 7px;
     margin-bottom: 0.35em;
 }
 
-.container{
-    padding: 80px 80px;
+.gameboard{
     background-color: #9596d9;
     border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container{
+    padding: 70px 80px 40px 80px;
     display: grid;
     width: 314px;
     justify-items: center;
@@ -74,7 +87,6 @@ header{
     "box4 box5 box6"
     "box7 box8 box9";
     gap: 7px;
-    /* display: none; */
 }
 
 .box{
@@ -89,6 +101,7 @@ header{
     font-size: 50px;
     color: #4749af;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .box1{
@@ -129,7 +142,7 @@ header{
 
 .form{
     display: flex;
-    display: none;
+    /* display: none; */
     justify-content: center;
     flex-direction: column;
     padding: 80px 200px;
@@ -141,32 +154,50 @@ header{
     margin: 10px;
 }
 
-.submitNames{
-    color: #3f3f57;
-    font-weight: 500;
-    border-radius: 10px;
+.button{
+    color: #cdcde5;
+    font-weight: bold;
+    border-radius: 7px;
     background-color: #9596d9;
     border: 0;
     padding: 10px;
     margin: 10px 60px;
 }
 
-.submitNames:hover{
+.button:hover{
     cursor: pointer;
 }
 
-.submitNames:focus{
+.button:focus{
     background-color: #404161;
 }
 
 input{
-    padding: 5px 2px;
+    padding: 5px 10px;
     border: 0;
     border-bottom: 1px solid #9596d9;
+    border-radius: 7px;
 }
 
 input:focus-visible{
     outline: none;
     order: 0;
     border-bottom: 1px solid #404161;
+}
+
+footer{
+    background-color: #c1c2d8;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: #5f60c5;
+    font-family: 'Roboto Mono', monospace;
+    word-spacing: -2px;
+    letter-spacing: -1px;
 }
